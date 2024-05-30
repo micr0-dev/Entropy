@@ -23,7 +23,37 @@ It's as simple as 1 and 2.
 
 ### Installation
 
-//to be written
+#### 1. Download
+
+Download the latest release for your operating system from the [releases page](https://github.com/micr0-dev/entc/releases).
+
+#### 2. Platform-Specific Instructions
+
+**Linux (x64 and ARM64):**
+
+1. Extract the downloaded archive (e.g., `entc-linux-x64.zip`) to a directory of your choice.
+2. Open a terminal and navigate to the extracted directory.
+3. Make the `entc` executable file runnable:
+   ```bash
+   chmod +x entc
+   ```
+4. You can now run `entc` from this directory or move the entire directory to a location in your `PATH`.
+
+**macOS (x64 and ARM64):**
+
+1. Extract the downloaded archive (e.g., `entc-osx-x64.zip`) to a directory of your choice.
+2. Open a terminal and navigate to the extracted directory.
+3. Make the `entc` executable file runnable:
+   ```bash
+   chmod +x entc
+   ```
+4. You can now run `entc` from this directory or move the entire directory to a location in your `PATH`. 
+
+**Windows (x86 and ARM64):**
+
+1. Extract the downloaded archive (e.g., `entc-win-x86.zip`) to a directory of your choice.
+2. Open a command prompt or PowerShell window and navigate to the extracted directory.
+3. You can now run `entc.exe` from this directory or add this directory to your system's `PATH` environment variable. 
 
 ### Commands and Options
 
