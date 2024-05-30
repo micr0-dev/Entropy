@@ -3,7 +3,7 @@
     <OutputType>Exe</OutputType>
     <RuntimeIdentifiers>linux-x64;osx-x64</RuntimeIdentifiers>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>Rottytooth.Esolang.Entropy.Compiler</RootNamespace>
+    <RootNamespace>micr0-dev.entc</RootNamespace>
     <AssemblyName>entc</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
