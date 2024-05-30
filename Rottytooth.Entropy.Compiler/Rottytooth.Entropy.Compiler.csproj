@@ -1,14 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
+    <RuntimeIdentifiers>linux-x64;osx-x64</RuntimeIdentifiers>
     <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>Rottytooth.Esolang.Entropy.Compiler</RootNamespace>
     <AssemblyName>entc</AssemblyName>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo> <!-- Assuming the AssemblyInfo.cs has custom attributes you want to keep -->
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   
   <ItemGroup>
     <PackageReference Include="Irony" Version="1.5.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="4.9.2" />
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="3.6.0" />
     <PackageReference Include="System.CodeDom" Version="6.0.0" />
   </ItemGroup>
@@ -16,6 +18,11 @@
   <ItemGroup>
     <ProjectReference Include="..\Rottytooth.Entropy\Rottytooth.Entropy.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.9.2" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <None Update="SamplePrograms\99Bottles.en">

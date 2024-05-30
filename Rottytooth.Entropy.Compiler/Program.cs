@@ -48,7 +48,7 @@ namespace Rottytooth.Entropy
                 {
                     mutRate = Convert.ToSingle(arguments["/m"]);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     Console.WriteLine("Invalid mutation rate provided");
                     PrintHelp();
@@ -90,12 +90,13 @@ namespace Rottytooth.Entropy
                     CodeConverter converter = new CodeConverter(programTree);
                     string program = converter.ToCSharp();
                     Console.WriteLine(program);
-                    CodeGenerator.Compile(program, fileName + ".exe");
+                    CodeGenerator.Execute(program);
                 }
             }
             catch (Exception ex)
             {
                 Console.Error.WriteLine(ex.GetType() + " error thrown: " + ex.Message);
+                Console.Error.WriteLine(ex.StackTrace);
             }
             return 0;
         }
@@ -136,7 +137,7 @@ namespace Rottytooth.Entropy
             Console.WriteLine("\t/d\tDebug mode: parse tree and print to screen");
             Console.WriteLine("\t/c\tTranslate to C#, but do not compile");
             Console.WriteLine("\t/h /?\tPrint this message");
-            Console.WriteLine("\t/m num\tSet mutation rate to num, where num is a value between " + Real.MinMutation.ToString() +" and " + Real.MaxMutation.ToString() + ", default is 2.");
+            Console.WriteLine("\t/m num\tSet mutation rate to num, where num is a value between " + Real.MinMutation.ToString() + " and " + Real.MaxMutation.ToString() + ", default is 2.");
         }
 
         private static Dictionary<string, string> LoadParameters(string[] args)
